@@ -1,0 +1,1 @@
+Put the new character creation logic within the character object level up functions

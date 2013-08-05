@@ -1,0 +1,108 @@
+Acrobatic
+Agile
+Alertness
+Animal Affinity
+Armor Proficiency(Light)
+Armor Proficiency(Medium),prerequisite feat,Armor Proficiency(Light)
+armor Proficiency(Heavy),prerequisite feat,ArmorProficiency(Medium)
+Athletic
+Augment Summoning,prerequisite feat,Spell Focus(conjuration)
+Blind-Fight,type,Fighter
+Combat Casting
+Combat Expertise,type,Fighter,prerequisite ability,Int 13
+Improved Disarm,type,Fighter,prerequisite feat,Combat Expertise
+Improved Feint,type,Fighter,prerequisite feat,Combat Expertise
+Improved Trip,type,Fighter,prerequisite feat,Combat Expertise
+Whirlwind Attack,type,Fighter,prerequisite feat,Combat Expertise,prerequisite feat,Dodge,prerequisite feat,Mobility,prerequisite feat,Spring Attack
+Combat Reflexes,type,Fighter
+Deceitful
+Deft Hands
+Diligent
+Dodge,type,Fighter,prerequisite ability,Dex 13
+Mobility,type,Fighter,prerequisite feat,Dodge
+Spring Attack,type,Fighter,prerequisite feat,Mobility,prerequisite BAB,4
+Endurance
+Die Hard,prerequisite feat,Endurance
+Eschew Materials
+Exotic Weapon Proficiency,type,Fighter,prerequisite BAB,1
+Extra Turning,Prerequisite unique,Turn or Rebuke
+Great Fortitude
+Improved Counterspell
+Improved Critical,type,Fighter,prerequisite unique,proficiency,prerequisite BAB,8
+Improved Initiative
+Improved Turning,prerequisite unique,turn or rebuke
+Improved Unamred Strike,type,Fighter
+Improved Grapple,prerequisite ability,Dex 13,prerequisite feat,Improved Unarmed Strike
+Deflect Arrows,prerequisite ability,Dex 13,prerequisite feat,Improved Unarmed Strike
+Snatch Arrows,prerequisite ability,Dex 15,prerequisite feat,Improved Unarmed Strike,prerequisite BAB,8
+Stunning Fist,prerequisite ability,Dex 13,prerequisite ability,Wis 13,prerequisite feat,Improved Unarmed Strike,prerequisite BAB,8
+Investigator
+Iron Will
+Leadership,prerequisite unique,6th level
+Lightning Reflexes
+Magical Aptitude
+Martial Weapon Proficiency
+Mounted Combat,type,Fighter,prerequisite unique,Ride Skill
+Mounted Archery,type,Fighter,prerequisite feat,Mounted Combat
+Ride-By Attack,type,Fighter,prerequisite feat,Mounted Combat
+Spirited Charge,type,Fighter,prerequisite feat,Mounted Combat,prerequisite feat,Ride-By Attack
+Trample,prerequisite feat,Mounted Combat
+Natural Spell,prerequisite ability,Wis 13,prerequisite unique,Wild Shape
+Negotiator
+Nimble Fingers
+Persuasive
+Point Blank Shot,type,Fighter
+Far Shot,type,Fighter,prerequisite feat,Point Blank Shot
+Precise Shot,type,Fighter,prerequisite feat,Point Blank Shot
+Rapid Shot,type,Fighter,prerequisite ability,Dex 13,Point Blank Shot
+Manyshot,type,Fighter,prerequisite ability,Dex 17,prerequisite feat,Rapid Shot,prerequisite BAB,6
+Shot on the Run,type,Fighter,prerequisite ability,Dex 13,prerequisite feat,Mobility,prerequisite feat,Point Blank Shot,prerequisite BAB,4
+Improved Precise Shot,type,Fighter
+Power Attack,type,FIghter,prerequisite ability,Str 13
+Cleave,type,Fighter,prerequisite feat,Power Attack
+Great Cleave,type,Fighter,prerequisite feat,Cleave,prerequisite BAB,4
+Improved Bull Rush,type,Fighter,prerequisite feat,Power Attack
+Improved Overrun,type,Fighter,prerequisite feat,Power Attack
+Improved Sunder,type,Fighter,prerequisite feat,Power Attack
+Quick Draw,type,Fighter,prerequisite BAB,1
+Rapid Reload,type,Fighter,prerequisite unique,Crossbow Proficiency
+Run
+Self-Sufficient
+Shield Proficiency
+Improved Shield Bash,type,Fighter,prerequisite unique,Shield Proficiency
+Tower Shield Proficiency,prerequisite unique,Shield Proficiency
+Simple Weapon Proficiency
+Skill Focus
+Spell Focus
+Greater Spell Focus
+Spell Mastery,prerequisite unique,1st level Wizard
+spell Penetration
+Greater Spell Penetration,prerequisite feat,Spell Penetration
+Stealthy
+Toughness
+Track
+Two-Weapon Fighting,type,Fighter,prerequisite ability,Dex 15
+Two-Weapon Defense,type,fighter,prerequisite feat,Two-Weapon Fighting
+Improved Two-Weapon Fighting,type,Fighter,prerequisite feat,Two-Weapon Fighting,prerequisite BAB,6
+Greater Two-Weapon Fighting,type,Fighter,prerequisite ability,Dex 19,prerequisite feat,Improved Two-Weapon Fighting,prerequisite BAB,11
+Weapon Finesse,type,Fighter,prerequisite unique,Weapon Proficiency,prerequisite BAB,1
+Weapon Focus,type,Fighter,prerequisite unique,Weapon Proficiency,prerequisite BAB,1
+Weapon Specialization,type,Fighter,prerequisite unique,Weapon Focus,prerequisite unique,4th level Fighter
+Greater Weapon Focus,type,Fighter,prerequisite unique,Weapon Focus,prerequisite unique,8th level Fighter
+Greater Weapon Specialization,type,Fighter,prerequisite unique,Greater Weapon Focus,prerequisite unique,12th level Fighter
+Brew Potion,prerequisite spellcaster,3
+Craft Magic Arms and Armor,prerequisite spellcaster,5
+Craft Rod,prerequisite spellcaster,9
+Craft Wand,prerequisite spellcaster,5
+Craft Wondrous Item,prerequisite spellcaster,3
+Forge Ring,prerequisite spellcaster,12
+Scribe Scroll,prerequisite spellcaster,1
+Empower Spell
+Enlarge Spell
+Extend Spell
+Heighten Spell
+Maximize Spell
+Quicken Spell
+Silent Spell
+Still Spell
+Widen Spell
