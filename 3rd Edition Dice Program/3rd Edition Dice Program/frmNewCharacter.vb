@@ -511,7 +511,24 @@ Public Class frmNewCharacter
                 i += 1
             Next
 
-
+            Dim strRaceStats() As String = Split(frmSkills.chain(character.strRace, "RaceStats.txt", True), ",")
+            If strRaceStats.GetUpperBound(0) > 0 Then
+                For i = 1 To strRaceStats.GetUpperBound(0) - 1
+                    If strRaceStats(i + 1) = "str" Then
+                        character.intStr += Convert.ToInt32(strRaceStats(i))
+                    ElseIf strRaceStats(i + 1) = "dex" Then
+                        character.intDex += Convert.ToInt32(strRaceStats(i))
+                    ElseIf strRaceStats(i + 1) = "con" Then
+                        character.intCon += Convert.ToInt32(strRaceStats(i))
+                    ElseIf strRaceStats(i + 1) = "wis" Then
+                        character.intWis += Convert.ToInt32(strRaceStats(i))
+                    ElseIf strRaceStats(i + 1) = "int" Then
+                        character.intInt += Convert.ToInt32(strRaceStats(i))
+                    ElseIf strRaceStats(i + 1) = "cha" Then
+                        character.IntCha += Convert.ToInt32(strRaceStats(i))
+                    End If
+                Next
+            End If
             character.strAlignment = cboAlignment.SelectedItem.ToString
             frmCharacterSheet.btnAddXP.Enabled = True
             frmCharacterSheet.btnAddItems.Enabled = True

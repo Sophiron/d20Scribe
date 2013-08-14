@@ -2586,12 +2586,12 @@ Namespace Character
             Dim strElements() As String
             strElements = Split(frmSkills.chain(strClass, "ClassLevelUp2.txt", True), ",")
             If bolRolledHP = True Then
-                intHP = DiceRoll(1, Convert.ToInt32(strElements(1))) + intConMod
+                intHP = DiceRoll(1, Convert.ToInt32(strElements(1)))
             Else
                 If intlevel <> 1 Then
-                    intHP = Convert.ToInt32(Convert.ToDouble(strElements(1)) / 2) + intConMod
+                    intHP = Convert.ToInt32(Convert.ToDouble(strElements(1)) / 2)
                 Else
-                    intHP = Convert.ToInt32(strElements(1)) + intConMod
+                    intHP = Convert.ToInt32(strElements(1))
                 End If
             End If
             Return intHP
@@ -2784,6 +2784,8 @@ Namespace Character
             For Each int In intHP
                 intHPtotal += int
             Next
+            intHPtotal += intConBonus() * intlevel
+            Return intHPtotal
         End Function
         Public Sub StatSet(ByVal strStat As String, ByVal intValue As Integer)
             Select Case strStat
