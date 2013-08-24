@@ -489,13 +489,14 @@ Public Class frmCharacterSheet
         Dim count As Integer = 0
         Dim colClasses As Collection = character.GetClassCollection
         Dim boolWeightOnly As Boolean = False 'used for items carried but not equiped, so that it will calc weight but not stats
-        Dim colFeats As Collection = character.GetFeatCollection
+        Dim colFeats As Collection
         Dim strEnhancementArray() As String 'used to check for an enhancement bonus
         Dim intEnhancement As Integer
         Dim bolMasterwork As Boolean
         bolEquipEnable = False
         ExecuteStack()
         CleanUp()
+        colFeats = character.GetFeatCollection
         If character.ToString <> Nothing Then
             btnAddXP.Enabled = True
         End If
@@ -514,7 +515,6 @@ Public Class frmCharacterSheet
             Next
         End If
         txtAlignment.Text = character.strAlignment
-        txtMaxHP.Text = Convert.ToString(character.GetHPTotal())
         If colFeats.Count <> 0 Then
             For Each strFeat In colFeats
                 lstFeats.Items.Add(strFeat)
@@ -548,7 +548,7 @@ Public Class frmCharacterSheet
                     End If
                     If count = character.GetNumOfClasses Then
                         x += 1
-                        d = 0
+                        count = 0
                     End If
                 Case 2
                     ReDim strItemArray(NumOfItems(txtHelmet.Text))
@@ -679,6 +679,16 @@ Public Class frmCharacterSheet
                     Else
                         x += 1
                         strItem = ""
+                    End If
+                Case 15
+                    boolWeightOnly = False
+                    If colFeats.Count > 0 Then
+                        strItem = Convert.ToString(colFeats(count + 1))
+                        count += 1
+                    End If
+                    If count = colFeats.Count Then
+                        x += 1
+                        d = 0
                     End If
                 Case Else
                     strItem = "end of list"
@@ -1052,7 +1062,8 @@ Public Class frmCharacterSheet
         For i = 0 To 17
             intTotalBonus += intBonusArray(7, i)
         Next
-        txtMaxHP.Text = Convert.ToString(intTotalBonus + character.getHPtotal)
+        character.intMaxHp = intTotalBonus + character.GetHPTotal
+        txtMaxHP.Text = Convert.ToString(character.intMaxHp)
         intTotalBonus = 0
         'Add loops to calculate the bonus to attacks and damage
         Dim intNumOfAttacks As Integer
@@ -1206,14 +1217,6 @@ Public Class frmCharacterSheet
             End If
         End If
         intTotalBonus = 0
-        Dim Hp As Integer
-        Dim HPTotal As Integer
-        For Each Hp In character.intHP
-            HPTotal += Hp
-        Next
-        intTotalBonus = 0
-        Hp += character.intConBonus * character.intlevel
-        txtMaxHP.Text = Convert.ToString(HPTotal)
         bolEquipEnable = True
         ExecuteStack()
     End Sub
@@ -1988,6 +1991,7 @@ Namespace Character
         Private dblCustom2ClassRanks As Double
         Private dblCustom2CrossRanks As Double
         Public strSavePath As String
+        Public intMaxHp As Integer
         Public Sub New()
             colClasses = New Collection
             colCaster = New Collection
